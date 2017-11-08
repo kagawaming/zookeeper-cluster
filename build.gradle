@@ -1,0 +1,18 @@
+group 'zookeeper'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+apply from: 'product_spec.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile spec.linkedin.pegasus.d2
+}
